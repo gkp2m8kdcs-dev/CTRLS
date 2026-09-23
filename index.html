@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTRLS — Your Personal Investment Command Center</title>
+<meta name="description" content="CTRLS is a comprehensive personal investment and finance command center. Track every dollar across multiple asset classes, manage portfolios, transactions, goals, and recurring bills — all stored privately on your device.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: #0a0a0f;
+    color: #e8e8ee;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 28px 0;
+    border-bottom: 1px solid #1a1a25;
+    position: sticky; top: 0;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 22px; font-weight: 700; letter-spacing: 2px; color: #ffffff; }
+  .logo span { color: #5ac8fa; }
+  nav a { color: #a0a0b0; margin-left: 28px; font-size: 15px; transition: color .2s; }
+  nav a:hover { color: #ffffff; }
+
+  .hero {
+    padding: 100px 0 80px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #5ac8fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 19px;
+    color: #a0a0b0;
+    max-width: 720px;
+    margin: 0 auto 40px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #2a2a35;
+    border-radius: 999px;
+    font-size: 13px;
+    color: #5ac8fa;
+    margin-bottom: 24px;
+  }
+
+  .features {
+    padding: 80px 0;
+    border-top: 1px solid #1a1a25;
+  }
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    text-align: center;
+    color: #a0a0b0;
+    font-size: 17px;
+    margin-bottom: 56px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: #13131c;
+    border: 1px solid #1f1f2b;
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform .2s, border-color .2s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: #5ac8fa; }
+  .card .icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, #5ac8fa22, #5ac8fa11);
+    border: 1px solid #5ac8fa44;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .card h3 { font-size: 18px; margin-bottom: 10px; color: #ffffff; }
+  .card p { color: #a0a0b0; font-size: 15px; }
+
+  .privacy-section {
+    padding: 80px 0;
+    border-top: 1px solid #1a1a25;
+    background: #0d0d14;
+  }
+  .privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .privacy-content h2 { font-size: 36px; margin-bottom: 24px; }
+  .privacy-content p { color: #a0a0b0; font-size: 17px; margin-bottom: 16px; }
+  .pill-row {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 12px; margin-top: 32px;
+  }
+  .pill {
+    padding: 8px 16px;
+    background: #13131c;
+    border: 1px solid #2a2a35;
+    border-radius: 999px;
+    font-size: 14px;
+    color: #5ac8fa;
+  }
+
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid #1a1a25;
+    text-align: center;
+    color: #6a6a78;
+    font-size: 14px;
+  }
+  footer a { color: #a0a0b0; margin: 0 12px; }
+  footer a:hover { color: #ffffff; }
+
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 38px; }
+    .hero p { font-size: 16px; }
+    nav a { margin-left: 16px; font-size: 14px; }
+    nav a.contact-link { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">CTRL<span>S</span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:Mefepzavap@icloud.com" class="contact-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="badge">iOS 16+ · iPhone · Native SwiftUI</span>
+    <h1>Take Control of Every Dollar.</h1>
+    <p>CTRLS is your personal investment and finance command center. Track portfolios, manage transactions, plan goals, and model scenarios — all stored privately on your device, with zero accounts and zero telemetry.</p>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-title">Built for Deliberate Investors</h2>
+    <p class="section-sub">Desktop-grade analytics with the simplicity and security of a native iPhone experience.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Portfolio Tracking</h3>
+        <p>Track stocks, ETFs, bonds, REITs, commodities, and other assets with full cost-basis accounting, allocation breakdowns, and diversity scores.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💸</div>
+        <h3>Transaction Management</h3>
+        <p>Log every dollar with income, expenses, transfers, categories, tags, recurring flags, and receipt photos captured on-device.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Goal Planning</h3>
+        <p>Track progress with circular indicators and projected completion dates based on contribution velocity.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔁</div>
+        <h3>Bill Forecasting</h3>
+        <p>Recurring bill tracking forecasts upcoming cash obligations, while a savings-rate metric evaluates spending discipline against income.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧮</div>
+        <h3>Five Calculators</h3>
+        <p>Compound interest, mortgage, retirement, ROI, and savings goal calculators turn raw numbers into forward-looking projections.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Interactive Charts</h3>
+        <p>Custom donut charts visualize allocation, while interactive line charts track price history over adjustable horizons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="privacy-section" id="privacy">
+  <div class="container privacy-content">
+    <h2>Privacy is Foundational.</h2>
+    <p>CTRLS never requests account credentials, never connects to brokerages, and never transmits user data off the device. There is no registration, no login, no telemetry.</p>
+    <p>Every chart, projection, and insight is computed locally — giving you complete ownership of your financial information.</p>
+    <div class="pill-row">
+      <span class="pill">No accounts</span>
+      <span class="pill">No login</span>
+      <span class="pill">No telemetry</span>
+      <span class="pill">No data uploaded</span>
+      <span class="pill">On-device only</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 CTRLS. All rights reserved.</p>
+    <p style="margin-top: 12px;">
+      <a href="index.html">Home</a> ·
+      <a href="support.html">Support</a> ·
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Use</a> ·
+      <a href="mailto:Mefepzavap@icloud.com">Mefepzavap@icloud.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
